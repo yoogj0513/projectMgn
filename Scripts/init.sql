@@ -16,3 +16,5 @@ create table tbl_pmgn(
 
 desc tbl_pmgn;
 select * from tbl_pmgn;
+
+select * from tbl_pmgn where pno = 1;
