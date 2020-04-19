@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.ProjectMapper">
+	<sql id="selectSQL">
+		select * from tbl_pmgn
+	</sql>
+	
+	<sql id="whereSQL">
+		<where>
+			<if test="pno != null">
+				pno = ${pno}
+			</if>
+		</where>
+	</sql>
+
+	<insert id="createProject" parameterType="ProjectVO">
+		insert into tbl_pmgn(pname, pcontent, pstartdate, penddate, pcdt)
+			value(#{pname}, #{pcontent}, #{pstartdate}, #{penddate}, #{pcdt})
+	</insert>
+
+
+	<select id="readProject" resultType="ProjectVO">
+		<include refid="selectSQL"/>
+		<include refid="whereSQL"/>
+	</select>
+	
+	<select id="list" resultType="ProjectVO">
+		<include refid="selectSQL"/>
+	</select>
+	
+	<update id="modityProject" parameterType="ProjectVO">
+		update tbl_pmgn
+			set pname=#{pname}, pcontent=#{pcontent}, pstartdate=#{pstartdate}, penddate=#{penddate}, pcdt=#{pcdt}
+		<include refid="whereSQL"/>
+	</update>
+	
+	<delete id="removeProject">
+		delete from tbl_pmgn
+		<include refid="whereSQL"/>
+	</delete>
+</mapper>

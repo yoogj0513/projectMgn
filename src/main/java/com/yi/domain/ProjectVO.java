@@ -2,12 +2,12 @@ package com.yi.domain;
 
 import java.util.Date;
 
-public class ProjectVo {
+public class ProjectVO {
 	private int pno;
 	private String pname;
 	private String pcontent;
 	private Date pstartdate;
-	private Date pendate;
+	private Date penddate;
 	private Pcdt pcdt;
 
 	public int getPno() {
@@ -43,11 +43,11 @@ public class ProjectVo {
 	}
 
 	public Date getPendate() {
-		return pendate;
+		return penddate;
 	}
 
 	public void setPendate(Date pendate) {
-		this.pendate = pendate;
+		this.penddate = pendate;
 	}
 
 	public Pcdt getPcdt() {
@@ -61,7 +61,7 @@ public class ProjectVo {
 	@Override
 	public String toString() {
 		return String.format("ProjectVo [pno=%s, pname=%s, pcontent=%s, pstartdate=%s, pendate=%s, pcdt=%s]", pno,
-				pname, pcontent, pstartdate, pendate, pcdt);
+				pname, pcontent, pstartdate, penddate, pcdt);
 	}
 
 }
