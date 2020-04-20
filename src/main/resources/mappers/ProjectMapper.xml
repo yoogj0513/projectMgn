@@ -26,6 +26,7 @@
 	
 	<select id="list" resultType="ProjectVO">
 		<include refid="selectSQL"/>
+		order by pno desc
 	</select>
 	
 	<update id="modityProject" parameterType="ProjectVO">

@@ -2,11 +2,15 @@ package com.yi.domain;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class ProjectVO {
 	private int pno;
 	private String pname;
 	private String pcontent;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date pstartdate;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date penddate;
 	private Pcdt pcdt;
 
@@ -42,11 +46,11 @@ public class ProjectVO {
 		this.pstartdate = pstartdate;
 	}
 
-	public Date getPendate() {
+	public Date getPenddate() {
 		return penddate;
 	}
 
-	public void setPendate(Date pendate) {
+	public void setPenddate(Date pendate) {
 		this.penddate = pendate;
 	}
 

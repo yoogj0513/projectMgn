@@ -29,7 +29,7 @@ public class ProjectDAOTest {
 		vo.setPname("관리자 프로젝트");
 		vo.setPcontent("관리자들의 하는 일을 프로젝트화 하는 것이다.");
 		vo.setPstartdate(new Date());
-		vo.setPendate(new Date());
+		vo.setPenddate(new Date());
 		vo.setPcdt(Pcdt.READY);
 		dao.createProject(vo);
 	}
