@@ -36,7 +36,7 @@ public class ProjectDAOTest {
 
 	@Test
 	public void testReadProject() throws Exception {
-		dao.readProject(3);
+		dao.readProject(2);
 	}
 
 	@Test
@@ -47,7 +47,7 @@ public class ProjectDAOTest {
 	@Test
 	public void testModityProject() throws Exception {
 		ProjectVO vo = new ProjectVO();
-		vo.setPno(3);
+		vo.setPno(2);
 		vo.setPname("인력 관리 프로그램");
 		vo.setPcontent("인력관리를 효율적으로 관리하기 위한 프로젝트이다.");
 		vo.setPcdt(Pcdt.ONGOING);
@@ -56,7 +56,7 @@ public class ProjectDAOTest {
 
 	@Test
 	public void testRemoveProject() throws Exception {
-		dao.removeProject(2);
+		dao.removeProject(1);
 	}
 
 }
