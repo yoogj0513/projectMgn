@@ -1,4 +1,4 @@
-package com.yi.projectMgn;
+package com.yi.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
