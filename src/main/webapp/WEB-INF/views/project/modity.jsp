@@ -62,9 +62,17 @@
 		</p>
 		<p class="btn">
 			<input type="submit" value="저장"/>
-			<input type="reset" value="취소"/>
+			<input type="button" value="취소" id="cencal"/>
 		</p>
 	</form>
 </section>
+
+<script>
+	$(function(){
+		$("#cencal").click(function() {
+			location.href = "${pageContext.request.contextPath}/project/read?pno="+${item.pno};
+		})
+	})
+</script>
 	
 <%@ include file="../include/footer.jsp" %>

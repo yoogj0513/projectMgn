@@ -1,6 +1,5 @@
 package com.yi.controller;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +45,6 @@ public class ProjectController {
 	@RequestMapping(value = "/modity", method = RequestMethod.GET)
 	public String modityGet(int pno, Model model) throws Exception {
 		ProjectVO vo =service.readByNo(pno);
-		System.out.println(vo);
 		model.addAttribute("item", vo);
 		return "/project/modity";
 	}
