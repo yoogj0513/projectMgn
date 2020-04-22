@@ -1,9 +1,9 @@
 select user(), database();
 
 create database jin_project;
+
 use jin_project;
 
-drop table tbl_pmgn;
 create table tbl_pmgn(
 	pno int not null auto_increment,
 	pname varchar(200) not null,
