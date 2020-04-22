@@ -61,7 +61,7 @@
 			</select>
 		</p>
 		<p class="btn">
-			<input type="submit" value="저장"/>
+			<input type="submit" value="수정"/>
 			<input type="button" value="취소" id="cencal"/>
 		</p>
 	</form>
