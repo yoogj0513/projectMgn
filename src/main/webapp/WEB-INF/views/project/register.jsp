@@ -31,7 +31,21 @@
 		border: none;
 	}
 </style>
-
+<script>
+	$(function(){
+		$("form").submit(function() {
+			var pname = $("input[name='pname']").val();
+			var pcontent = $("input[name='pcontent']").val();
+			var pstartdate = $("input[name='pstartdate']").val();
+			var penddate = $("input[name='penddate']").val();
+			
+			if(pname == "" || pcontent == "" || pstartdate == "" || penddate == "") {
+				alert("작성되지 않는 내용이 있습니다.");
+				return false;
+			}
+		})
+	})
+</script>
 <section class="container">
 	<form action="register" method="post">
 		<p>
